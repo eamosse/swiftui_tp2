@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+struct MyReceipes : View {
+    var body: some View {
+        List() {
+            ForEach(MockData.sample) { receipe in
+                Text(receipe.title)
+            }
+        }
+    }
+}
 struct ContentView: View {
     var body: some View {
         VStack {
@@ -21,4 +30,8 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+#Preview {
+    MyReceipes()
 }
